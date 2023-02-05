@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: property-watch-configmap
+data:
+    rightMove.buy.property.fetch.schedule: "10 * * * * *"
+    rightMove.let.property.fetch.schedule: "40 * * * * *"

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: property-watch
+  labels:
+    app: property-watch
+spec:
+  selector:
+    matchLabels:
+      app: property-watch
+  template:
+    metadata:
+      labels:
+        app: property-watch
+    spec:
+      containers:
+        - name: property-watch
+          image: ashishkhedekar/property-watch
+          envFrom:
+            - configMapRef:
+                name: property-watch-configmap
